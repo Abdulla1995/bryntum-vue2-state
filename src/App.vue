@@ -86,7 +86,6 @@ export default {
       // actually this state should give me 3 columns when I remove Phone number from the list but it provides 4 of them
       // that's why I just splice and copied to get only 2 columns and then apply them on mounted hook.
       const stateColumnsCopy = this.gridInstance.state.columns.splice(1, 2)
-      this.gridInstance.state.columns = stateColumnsCopy
       const copiedInstance = { ...this.gridInstance.state }
       copiedInstance.columns = stateColumnsCopy
       localStorage.setItem(this.gridStateId, JSON.stringify(copiedInstance))
